@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- 
+
+===================================================================================
+============================   Por RonaldsS  ======================================
+===================================================================================
+### TRÊS OBJETIVOS
+1 - Criando uma TAG 'p' via js;
+2 - acrescentando uma imagen dentro da TAG 'p' via JS;
+3 - executando as ações acima via uma função embutida dentro de um 'input:button'.
+===================================================================================
+===================================================================================
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #fazer{
+            margin: 50px;
+        }
+        #op{
+            width: 700px;
+             background: red;
+             
+            text-align: center;
+        }
+    </style>
+    <script>
+        
+        function iniciar(){
+            var saida = document.querySelector("p#op")
+            var escrita = document.createElement("img")
+            escrita.setAttribute('src','1.png')
+            escrita.setAttribute('id','fazer')
+            saida.appendChild(escrita)
+        }
+        
+    </script>
+</head>
+<body>
+    <input type="button" onclick="iniciar()" value="Ação">
+    <p id="op">
+        
+    </p>
+</body>
+</html>
