@@ -40,21 +40,25 @@
         }
     </style>
     <script>
-        
+        pulso = 0
         function iniciar(){
             var saida = document.querySelector("p#op")
             var escrita = document.createElement("img")
             escrita.setAttribute('src','1.png')
             escrita.setAttribute('id','fazer')
             saida.appendChild(escrita)
+            pulso++
+            setTimeout("iniciar()",1000)
+            console.log(`Pulso: ${pulso}`)
         }
+        
         
     </script>
 </head>
-<body>
+<body onload="iniciar()">
     <input type="button" onclick="iniciar()" value="Ação" class="bt">
     <p id="op">
         
     </p>
-</body>
+</body>     
 </html>
