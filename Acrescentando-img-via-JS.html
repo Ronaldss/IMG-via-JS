@@ -51,12 +51,24 @@
             setTimeout("iniciar()",1000)
             console.log(`Pulso: ${pulso}`)
         }
-        
+        function delet(){
+
+            /*
+                Note que, para remover o nó (e não somente o conteúdo do mesmo), 
+                você precisa antes recuperar o pai deste nó:
+            */
+            // Removendo um nó a partir do pai
+            
+            var node = document.getElementById("fazer");
+            if (node.parentNode) {
+            node.parentNode.removeChild(node);
+}
+        }
         
     </script>
 </head>
 <body onload="iniciar()">
-    <input type="button" onclick="iniciar()" value="Ação" class="bt">
+    <input type="button" onclick="delet()" value="Ação" class="bt">
     <p id="op">
         
     </p>
